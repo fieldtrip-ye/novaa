@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Nova Run</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="game-header">
+        <div class="brand-mark" aria-hidden="true">NR</div>
+        <div class="brand-copy">
+          <p class="eyebrow">ARCADE FLIGHT / 01</p>
+          <h1>Nova Run</h1>
+        </div>
+        <p class="header-note">DEFEND THE<br />NEBULA SECTOR</p>
+      </header>
+
+      <div class="hud-panel">
+        <div class="hud-stat">
+          <span class="label">Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="hud-stat">
+          <span class="label">Best</span>
+          <strong id="bestScore">0</strong>
+        </div>
+        <div class="hud-stat">
+          <span class="label">Lives</span>
+          <strong id="lives">3</strong>
+        </div>
+        <div class="hud-stat">
+          <span class="label">Level</span>
+          <strong id="level">1</strong>
+        </div>
+      </div>
+
+      <div class="screen-frame">
+        <canvas id="gameCanvas" width="900" height="600" aria-label="Nova Run game area"></canvas>
+        <div id="weaponLevel" class="weapon-status" aria-live="polite">Weapon Lv. 1</div>
+      </div>
+      <p class="powerup-hint"><span aria-hidden="true">N</span> Pink N pickups grant one Nova blast</p>
+
+      <div class="touch-controls" aria-label="Touch controls">
+        <button type="button" data-control="left" aria-label="Move left">◀</button>
+        <button type="button" data-control="right" aria-label="Move right">▶</button>
+        <button type="button" data-control="shoot" aria-label="Shoot">FIRE</button>
+        <button id="novaButton" type="button" aria-keyshortcuts="X" aria-label="Nova blast, no charges" disabled>NOVA</button>
+      </div>
+
+      <div class="controls-panel">
+        <div class="action-buttons">
+          <button id="startButton" type="button"><span aria-hidden="true">▶</span> Start Run</button>
+          <button id="soundButton" type="button" aria-pressed="true">Sound: On</button>
+          <button id="musicButton" type="button" aria-pressed="true">Music: On</button>
+        </div>
+        <div class="keyboard-hints" aria-label="Keyboard controls">
+          <p><kbd>A</kbd> <kbd>D</kbd> <span>or</span> <kbd>←</kbd> <kbd>→</kbd> <span>Move</span></p>
+          <p><kbd>Space</kbd> <span>Fire</span></p>
+          <p><kbd>X</kbd> <span>Nova</span></p>
+        </div>
+      </div>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
